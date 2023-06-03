@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./script.js" defer></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body class="flex min-h-screen items-center justify-center bg-charcoalGrey">
+    <main class="flex items-center justify-center bg-white md:rounded-3xl">
+      <div
+        class="form-container flex flex-col-reverse gap-8 pb-4 md:py-4 md:pl-8 md:pr-4 lg:flex-row"
+      >
+        <div class="flex flex-col justify-center gap-6 px-4 lg:w-1/2">
+          <h1 class="text-4xl font-bold text-darkSlateGrey md:text-5xl">
+            Stay updated!
+          </h1>
+
+          <p class="text-charcoalGrey">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <ul class="flex flex-col gap-2 text-charcoalGrey">
+            <li class="relative pl-8">
+              Product discovery and building what matters
+            </li>
+            <li class="relative pl-8">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="relative pl-8">And much more!</li>
+          </ul>
+
+          <form action="#" class="form flex flex-col gap-8">
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <label for="email" class="text-xs font-bold text-darkSlateGrey"
+                  >Email address</label
+                >
+                <p class="error hidden text-xs font-bold text-tomato">
+                  Valid email required
+                </p>
+              </div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+                class="w-full rounded-md border border-solid border-grey px-6 py-4"
+              />
+            </div>
+            <button
+              class="submit block w-full rounded-md bg-darkSlateGrey px-6 py-4 font-bold text-white"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <div class="mx-auto flex justify-end lg:w-1/2">
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcset="./assets/images/illustration-sign-up-desktop.svg"
+            />
+            <img
+              src="./assets/images/illustration-sign-up-mobile.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </picture>
+        </div>
+      </div>
+    </main>
+    <div class="success hidden space-y-6 rounded-xl bg-white p-16">
+      <img src="./assets/images/icon-success.svg" alt="" />
+      <h2 class="text-5xl font-bold text-darkSlateGrey">
+        Thanks for subscribing!
+      </h2>
+
+      <p class="text-darkSlateGrey">
+        A confirmation email has been sent to
+        <strong class="email-span"></strong>. Please open it and click the
+        button inside to confirm your subscription.
+      </p>
+
+      <button
+        class="w-full rounded-md bg-darkSlateGrey py-4 font-bold text-white"
+      >
+        Dismiss message
+      </button>
+    </div>
+  </body>
+</html>
